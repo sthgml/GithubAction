@@ -11,3 +11,7 @@ jobs:
       env: 
         NAME: 'sohee.park'
       run: echo "내 아이디는 $NAME 입니다."
+    - name: 2. 변수출력
+      env: 
+        ID: ${{ github.actor}}
+      run: echo "내 아이디는 $ID 입니다."
