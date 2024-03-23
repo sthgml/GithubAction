@@ -18,8 +18,8 @@ jobs:
       run: python githubactiontest.py
     - name: Commit files
       run: |
-        git config --local user.email "paullabkorea@gmail.com"
-        git config --local user.name "paullabkorea"
+        git config --local user.email "sthgml@naver.com"
+        git config --local user.name "sthgml"
         git add .
         git commit -m "Run crawler and update current data"
     - name: Push changes
