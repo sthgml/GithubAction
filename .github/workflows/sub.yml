@@ -15,3 +15,8 @@ jobs:
       env: 
         ID: ${{ github.actor}}
       run: echo "내 아이디는 $ID 입니다."
+    - name: 3. 환경변수로 출력
+      env: 
+        key: ${{ secrets.SECRET_KEY }}
+      run: echo "내 key는 $key 입니다 "
+      
