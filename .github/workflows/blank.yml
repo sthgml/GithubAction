@@ -1,11 +1,17 @@
+# github Action의 이름
 name: helloGithubAction
- 
+
+# 이벤트 리스너라고 보면 됩니다. push외에도 pull_request가 들어갈 수 있고 배열 형태인 만큼, 다중 이벤트를 처리하는 것도 가능합니다. 
 on: [push]
 
+# 위의 이벤트가 일어나면 아래의 job이 실행됩니다.
 jobs:
+  # 작업 단위
   build:
+    # 실행되는 OS, window, mac os 도 제공합니다. 자세한 버전은 우측의 documentation 참고하자.
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
+    # 다른 사람이 만들어놓은 action import - (github.com/actions/checkout | marketplace)
+    - uses: actions/checkout@v2 # 아무것도 없는 os에서 코드 클론, 다운로드 받아 실행하는 과정 포함
     - name: 파이썬 실행!!
       run: python test.py
